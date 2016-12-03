@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+    RewriteBase /
+
+    #绑定 www.iwuyuan.cc 到 iwuyuan子目录
+    RewriteCond %{HTTP_HOST} ^(www.)?iwuyuan.cc$ [NC]
+    RewriteCond %{REQUEST_URI} !^/iwuyuan/
+    RewriteRule ^(.*)$ iwuyuan/$1?Rewrite [L,QSA]
+
+    #绑定 rootdemo.iwuyuan.cc 到 rootdemo子目录
+    RewriteCond %{HTTP_HOST} ^rootdemo.iwuyuan.cc$ [NC]
+    RewriteCond %{REQUEST_URI} !^/rootdemo/
+    RewriteRule ^(.*)$ rootdemo/$1?Rewrite [L,QSA]
+
+    #绑定 www.wuyuanstyle.com 到 wuyuanstyle子目录
+    RewriteCond %{HTTP_HOST} ^(www.)?wuyuanstyle.com$ [NC]
+    RewriteCond %{REQUEST_URI} !^/wuyuanstyle/
+    RewriteRule ^(.*)$ wuyuanstyle/$1?Rewrite [L,QSA]
+
+</IfModule>

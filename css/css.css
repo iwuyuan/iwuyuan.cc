@@ -1,0 +1,145 @@
+/********************************************************************
+*	CreateTime	: 2016/11/05										*
+*	Description : iwuyuan.cc 公共样式文件	 							*
+* 	Author		: Paul												*
+*   Web			: 耕宝玉坊											*
+*   Version 	: 1.0.0												*
+*   ModifyTime	: 2016/11/27										*
+*********************************************************************/
+
+/*********************** 公共样式 ************************************/
+body,
+button,
+input, 
+select, 
+textarea,
+h2, 
+h3, 
+h4, 
+h5, 
+h6 { 
+    font-family: Microsoft YaHei,'宋体' ,  
+    Tahoma, Arial, "\5b8b\4f53", sans-serif;
+}
+img {
+    width: 100%;
+}
+a:link{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+/* 回到顶部 */
+.back_top{
+	position: fixed;
+	width: 50px;
+	bottom: 2%;
+	right: 0;
+	display: none;
+}
+/* ICP备案号 */
+.site_icp{
+	color: #000;
+}
+/* 联系我们 */
+.wuyuan_contact img{
+	width: 102px;
+}
+/************************* 首页 *************************/
+/* 大标题 */
+h1{
+    font-family: STXingKai,Microsoft YaHei,
+    '宋体' ,Arial, "\5b8b\4f53", sans-serif;
+}
+/* 顶部大图背景（临时背景） */
+.first_full p{
+	background-color: rgba(0,0,0,0.1);
+	padding-top: 100px;
+	font-size: 4em;
+	height: 0;
+}
+
+/* 所有图片内边距间隙 */
+.iwuyuan_pic{
+    padding: 3px;
+    position: relative;
+}
+
+.img_more{
+	position: relative;
+}
+.img_more_pop{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255,255,255,0.2);
+	padding-top: 30%;
+	display: none;
+	color: #fff;
+}
+.img_more:hover .img_more_pop{
+	display: inline-block;
+}
+/********************* 醉美婺源 ***************************/
+.top_img{
+	margin-bottom: 20px;
+}
+.wuyuan_seasons{
+	margin-top: 50px;
+}
+.article_text{
+	line-height: 1.5em;
+	height: 9em;
+	overflow: hidden;
+	text-indent: 2em;
+}
+
+/************************ 四季轮回 ***************************/
+
+
+
+
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+	h1{
+		font-size: 24px;
+	}
+	h2{
+		font-size: 20px;
+		resize: ;
+	}
+	h3{
+		font-size: 16px;
+	}
+	p{
+		font-size: 10px;
+	}
+	/* 更多图片 */
+	.img_more_pop{
+		display: inline-block;
+		font-size: 10px;
+	}
+
+	.back_top{
+		left: 0;
+	}
+	.top_img,.wuyuan_seasons{
+		margin-top: 50px;
+	}
+	.article_text{
+		height: auto;
+	}
+	footer{
+		font-size: 10px;
+	}
+}
