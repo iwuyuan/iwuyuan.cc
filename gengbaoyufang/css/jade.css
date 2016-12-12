@@ -1,0 +1,19 @@
+/* 
+	列表页样式
+ */
+/* .jade_pic{
+	position: relative;
+} */
+header{
+	margin-bottom: 55px;
+}
+.jade_pic img{
+	width: 100%;
+}
+
+/* .jade_text{
+	float: left;
+}
+.jade_view{
+	float: left;
+} */

@@ -1,0 +1,109 @@
+/* 
+	首页样式文件
+ */
+
+/* 顶部轮播 */
+.header_slides{
+	margin-top: 50px;
+}
+.header_slides img{
+	width: 100%;
+	height: auto;
+}
+/* 简介 */
+.web_description{
+	padding-top: 10px;
+}
+.des_leftpic > img{
+	width: 100%;
+}
+.des_righttext > h2{
+	font-family: "华文行楷";
+}
+.des_righttext > p{
+	text-indent: 2em;
+	font-size: 16px;
+}
+
+/* 作品 */
+.pic_header{
+	height: 40px;
+	width: 100%;
+}
+.pic1_1{
+	height: auto;
+	position: relative;
+}
+.pic1_text{
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+	color: #fff;
+}
+.pic1_2{
+	height: auto;
+	position: relative;
+}
+.pic1_1 > img{
+	width: 100%;
+}
+.pic1_2 > img{
+	width: 100%;
+}
+.pic2_text{
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+	color: #fff;
+}
+.pic_view{
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	color: #fff;
+}
+
+.pic_ul span{
+	margin-right: 2px;
+}
+/* 红心
+.pic_ul li:first-child span{
+	color: red;
+} */
+
+/* 艺术之旅 */
+.jade_img{
+	position: relative;
+}
+.jade_text{
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	color: #fff;
+}
+
+
+
+
+@media (max-width: 700px) {
+	.web_description p{
+		height: 10em;
+		line-height: 2em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+@media (min-width: 992px) {
+	/* PC鼠标悬浮显示作品，点赞分享查看信息 */
+	.pic2_text{
+		display: none;
+	}
+	.pic1_2 .pic_view{
+		display: none;
+	}
+	.jade_wechat img,
+	.jade_weibo img{
+		padding: 20px;
+	}
+}
