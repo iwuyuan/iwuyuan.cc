@@ -9,11 +9,10 @@
 $(document).ready(function(){
 	// ****************** 首页 ********************
 	// 第一项组图标头高度+导航栏高度
-	var _pageHeaderFirst = innerHeight - $(".wuyuan_beauty .page-header").height()-60 +"px";
-	$(".first_full").css("height",_pageHeaderFirst);
-	//顶部区域显示的高度
-	$(".first_full p").animate({height:_pageHeaderFirst}, "slow");
-	$(".first_full p").css("verti");
+	// var _pageHeaderFirst = innerHeight - $(".wuyuan_beauty .page-header").height()-60 +"px";
+	// $(".first_full").css("height",_pageHeaderFirst);
+	// //顶部区域显示的高度
+	// $(".first_full p").animate({height:_pageHeaderFirst}, "slow");
 	// 初始化图片查看器插件
 	// $(".wuyuan_spring").viewer({url: 'data-src'});
 	// **********************************
