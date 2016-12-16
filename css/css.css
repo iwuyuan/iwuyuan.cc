@@ -68,7 +68,9 @@ h1{
 	font-size: 3em;
 	height: 800px;
 }
-
+.carousel>.carousel-control{
+	background-image: none;
+}
 /* 所有图片内边距间隙 */
 .iwuyuan_pic{
     padding: 3px;
