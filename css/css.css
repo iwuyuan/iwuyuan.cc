@@ -59,13 +59,18 @@ h1{
     '宋体' ,Arial, "\5b8b\4f53", sans-serif;
 }
 /* 顶部大图背景（临时背景） */
+/*.first_full{
+	height: 800px;
+}
 .first_full p{
 	background-color: rgba(0,0,0,0.1);
 	padding-top: 100px;
-	font-size: 4em;
-	height: 0;
+	font-size: 3em;
+	height: 800px;
+}*/
+.carousel>.carousel-control{
+	background-image: none;
 }
-
 /* 所有图片内边距间隙 */
 .iwuyuan_pic{
     padding: 3px;
@@ -124,6 +129,9 @@ h1{
 	p{
 		font-size: 10px;
 	}
+	/*.first_full p{
+		font-size: 1em;
+	}*/
 	/* 更多图片 */
 	.img_more_pop{
 		display: inline-block;
