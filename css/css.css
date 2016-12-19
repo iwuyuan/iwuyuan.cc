@@ -86,10 +86,10 @@ h1{
 	width: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(255,255,255,0.3);
 	padding-top: 30%;
 	display: none;
-	color: #fff;
+	color: #000;
 }
 .img_more:hover .img_more_pop{
 	display: inline-block;
@@ -109,7 +109,9 @@ h1{
 }
 
 /************************ 四季轮回 ***************************/
-
+.img_more>a:hover{
+	color: #fff;
+}
 
 
 
@@ -136,6 +138,9 @@ h1{
 	.img_more_pop{
 		display: inline-block;
 		font-size: 10px;
+	}
+	.img_more>a:hover{
+		color: #fff;
 	}
 
 	.back_top{

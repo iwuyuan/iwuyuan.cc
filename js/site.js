@@ -34,7 +34,7 @@ $(document).ready(function(){
 	    }, 1000);
 	});
 	// 提示信息
-	$(".iwuyuan_pic img,.iwuyuan_article a,.page_container a").off("click").on("click",function(){
+	$(".iwuyuan_pic img,.iwuyuan_article a,.page_container a,.btn").off("click").on("click",function(){
 		layer.msg('程序员宝宝还没写好<br/>先看看别的吧', {
 	    	time: 4000, //4s后自动关闭
 	    	btn: ['加油吧!!!', '哈哈哈...', '小菜鸟快点:)']
