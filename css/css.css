@@ -113,6 +113,13 @@ h1{
 	color: #fff;
 }
 
+/************************ 图片详情 ***************************/
+.panel_tag_wrap a{
+	margin-top: 5px;
+}
+.comment_input{
+	resize: vertical;
+}
 
 
 
