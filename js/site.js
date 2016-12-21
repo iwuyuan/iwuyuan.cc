@@ -48,4 +48,8 @@ $(document).ready(function(){
 			$(".back_top").fadeOut("fast");
 		}
 	}
+
+ 	$(".iwuyuan_piclist a").off("click").on("click",function(){
+        $(".iwuyuan_bigpic").attr("src",$(this).find("img").attr("src"));
+    });
 });
