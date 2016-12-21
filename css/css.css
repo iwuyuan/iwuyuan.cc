@@ -46,15 +46,18 @@ a:active{
 }
 /* ICP备案号 */
 .site_icp{
-	color: #000;
+	color: #333;
 }
 /* 联系我们 */
 .wuyuan_contact img{
 	width: 102px;
 }
+.text_indent{
+	text-indent: 2em;
+}
 /************************* 首页 *************************/
 /* 大标题 */
-h1{
+h1,h2{
     font-family: STXingKai,Microsoft YaHei,
     '宋体' ,Arial, "\5b8b\4f53", sans-serif;
 }
@@ -120,8 +123,23 @@ h1{
 .comment_input{
 	resize: vertical;
 }
+.iwuyuan_detail_content>.page-header{
+	margin-top: 0;
+}
 
-
+/************************ 图片列表 ***************************/
+.pic_list .page-header{
+	margin-top: 0;
+}
+.pic_list a:link{
+	color:#333;
+}
+.pic_list a:visited{
+	color:#333;
+}
+.pic_list a:active{
+	color:#333;
+}
 
 /* 媒体查询 */
 @media (max-width: 768px) {
