@@ -52,4 +52,39 @@ $(document).ready(function(){
  	$(".iwuyuan_piclist a").off("click").on("click",function(){
         $(".iwuyuan_bigpic").attr("src",$(this).find("img").attr("src"));
     });
+
+ 	// 判断当前浏览器
+    function getExplorerInfo() {
+		var explorer = window.navigator.userAgent.toLowerCase() ;
+		//ie 
+		if (explorer.indexOf("msie") >= 0) {
+			var ver=explorer.match(/msie ([\d.]+)/)[1];
+			return {type:"IE",version:ver};
+		}
+		//firefox 
+		else if (explorer.indexOf("firefox") >= 0) {
+			var ver=explorer.match(/firefox\/([\d.]+)/)[1];
+			return {type:"Firefox",version:ver};
+		}
+		//Chrome
+		else if(explorer.indexOf("chrome") >= 0){
+			var ver=explorer.match(/chrome\/([\d.]+)/)[1];
+			return {type:"Chrome",version:ver};
+		}
+		//Opera
+		else if(explorer.indexOf("opera") >= 0){
+			var ver=explorer.match(/opera.([\d.]+)/)[1];
+			return {type:"Opera",version:ver};
+		}
+		//Safari
+		else if(explorer.indexOf("Safari") >= 0){
+			var ver=explorer.match(/version\/([\d.]+)/)[1];
+			return {type:"Safari",version:ver};
+		}
+	}
+	// 当前为IE10以下时提示并尝试关闭页面
+	if(getExplorerInfo().type=="IE"&&getExplorerInfo().version<10){
+		alert("为了您更好的浏览网页信息，请使用非IE浏览器访问本站!");
+		window.close();//关闭当前页
+	}
 });
