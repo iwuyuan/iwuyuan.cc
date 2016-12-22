@@ -126,7 +126,20 @@ h1,h2{
 .iwuyuan_detail_content>.page-header{
 	margin-top: 0;
 }
-
+.iwuyuan_sharepic{
+	width: 55px;
+	height: auto;
+}
+.wechat_float{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: rgba(0,0,0,0.6);
+	display: none;
+}
 /************************ 图片列表 ***************************/
 .pic_list .page-header{
 	margin-top: 0;

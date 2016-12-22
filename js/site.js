@@ -53,6 +53,16 @@ $(document).ready(function(){
         $(".iwuyuan_bigpic").attr("src",$(this).find("img").attr("src"));
     });
 
+ 	// 分享到朋友圈
+ 	$(".sharepic_wechat").off("click").on("click",function(){
+ 		if(navigator.userAgent.match(/MicroMessenger/i)){
+ 			$(".wechat_float").fadeIn("slow");
+ 		}
+ 	});
+ 	$(".wechat_float").off("click").on("click",function(){
+ 		$(".wechat_float").fadeOut("slow");
+ 	});
+
  	// 判断当前浏览器
     function getExplorerInfo() {
 		var explorer = window.navigator.userAgent.toLowerCase() ;
@@ -80,6 +90,9 @@ $(document).ready(function(){
 		else if(explorer.indexOf("Safari") >= 0){
 			var ver=explorer.match(/version\/([\d.]+)/)[1];
 			return {type:"Safari",version:ver};
+		}
+		else{
+			return {type:"Unknow",version:"Unknow"};
 		}
 	}
 	// 当前为IE10以下时提示并尝试关闭页面
