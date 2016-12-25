@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
-    <title>徽派建筑 - 梦里老家</title>
+    <title>徽派民宿 - 梦里老家</title>
     <meta name="keywords" content="醉美婺源,梦里老家,徽州,徽派建筑">
     <meta name="description" content="徽派建筑是中国传统建筑最重要的流派之一，徽派建筑作为徽文化的重要组成部分，历来为中外建筑大师所推崇，流行于徽州（今黄山市、绩溪县、婺源县）及严州、金华、衢州等浙西地区。以砖、木、石为原料，以木构架为主。">
     <meta name="format-detection" content="telephone=no">
@@ -67,9 +67,19 @@
         </ol>
     </section>
 
+<!-- 标签栏 -->
+    <section class="container sight_tag_section hidden">
+        <ul class="list-inline sight_tag_list text-center">
+            <li class="label label-default">
+                &nbsp;<a href="javascript:void(0)" class="sight_tag_li">思口</a>&nbsp;
+                <span class="glyphicon glyphicon-remove sight_tag_li_del"></span>&nbsp;
+            </li>
+        </ul>
+    </section>
+
 <!-- 主体信息内容 -->
     <section class="container pic_list">
-        <a href="iwuyuansighttpl.html" class="row">
+        <a href="sikou/sigt_xichongyuan201612231338.html" class="row">
             <div class="col-md-3">
                 <img src="../image/img-thumbnail/xichongyuan1.jpg" class="img-rounded" alt="婺源思溪延村巨型算盘" />
             </div>
@@ -221,7 +231,7 @@
     <script src="../js/jquery-1.12.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../layer/layer.js"></script>
-    <script src="../js/viewer.min.js"></script>
+    <script src="../js/SiteFunc.js"></script>
     <script src="../js/site.js"></script>
     <!-- <script>
     (function(){
@@ -237,5 +247,16 @@
         s.parentNode.insertBefore(bp, s);
     })();
     </script> -->
+    <script>
+        var _addr=SiteFunc.GetUrlParam("addr");
+        if(_addr!=null){
+            $(".sight_tag_li").html("思口");
+            $(".sight_tag_section").removeClass("hidden");
+        }
+        $(".sight_tag_li_del").off("click").on("click",function(){
+            $(".sight_tag_section").addClass("hidden");
+            window.location.href="iwuyuansightlisttpl.html";
+        });
+    </script>
 </body>
 </html>
