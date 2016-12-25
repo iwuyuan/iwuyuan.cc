@@ -55,7 +55,7 @@ $(document).ready(function(){
 
  	// 分享到朋友圈
  	$(".sharepic_wechat").off("click").on("click",function(){
- 		if(navigator.userAgent.match(/MicroMessenger/i)){
+ 		if(SiteFunc.IsWechat()){
  			$(".wechat_float").fadeIn("slow");
  		}
  	});
@@ -63,41 +63,18 @@ $(document).ready(function(){
  		$(".wechat_float").fadeOut("slow");
  	});
 
- 	// 判断当前浏览器
-    function getExplorerInfo() {
-		var explorer = window.navigator.userAgent.toLowerCase() ;
-		//ie 
-		if (explorer.indexOf("msie") >= 0) {
-			var ver=explorer.match(/msie ([\d.]+)/)[1];
-			return {type:"IE",version:ver};
-		}
-		//firefox 
-		else if (explorer.indexOf("firefox") >= 0) {
-			var ver=explorer.match(/firefox\/([\d.]+)/)[1];
-			return {type:"Firefox",version:ver};
-		}
-		//Chrome
-		else if(explorer.indexOf("chrome") >= 0){
-			var ver=explorer.match(/chrome\/([\d.]+)/)[1];
-			return {type:"Chrome",version:ver};
-		}
-		//Opera
-		else if(explorer.indexOf("opera") >= 0){
-			var ver=explorer.match(/opera.([\d.]+)/)[1];
-			return {type:"Opera",version:ver};
-		}
-		//Safari
-		else if(explorer.indexOf("Safari") >= 0){
-			var ver=explorer.match(/version\/([\d.]+)/)[1];
-			return {type:"Safari",version:ver};
-		}
-		else{
-			return {type:"Unknow",version:"Unknow"};
-		}
-	}
+ 	// 分享到微博
+ 	$(".sharepic_weibo").off("click").on("click",function(){
+ 		var _title=encodeURIComponent(document.title);
+ 		var _url=encodeURIComponent(location.href);
+ 		var _img=encodeURIComponent("http://www.iwuyuan.cc/"+$(".iwuyuan_bigpic").attr("src").replace("../../",""));
+ 		window.open("http://service.weibo.com/share/share.php?appkey=3706659912&title="+_title+"&url="+_url+"&pic="+_img+"&searchPic=false&style=simple");
+ 	});
+
 	// 当前为IE10以下时提示并尝试关闭页面
-	if(getExplorerInfo().type=="IE"&&getExplorerInfo().version<10){
+	if(SiteFunc.Broswer().type=="IE"&&SiteFunc.Broswer().version<10){
 		alert("为了您更好的浏览网页信息，请使用非IE浏览器访问本站!");
 		window.close();//关闭当前页
 	}
+
 });
