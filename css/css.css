@@ -153,6 +153,11 @@ h1,h2{
 .pic_list a:active{
 	color:#333;
 }
+.sight_tag_list a:link{
+	color: #fff;
+}
+
+
 
 /* 媒体查询 */
 @media (max-width: 768px) {
